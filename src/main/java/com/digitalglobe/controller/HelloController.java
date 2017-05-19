@@ -38,14 +38,15 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 @RestController
 public class HelloController {
 	
-	private final static int QUOTE_COUNT = 16;
+	private final static int QUOTE_COUNT = 21;
+	
 	private final static String ORACLE_WELCOME = "Here, take a cookie. I promise, by the time you're done eating it, you'll feel right as rain.";
 	private final static String JAWS_WELCOME = "You're gonna need a bigger boat.";
 	private final static String ANCHORMAN_WELCOME = "I'm Ron Burgandyyyy?";
 	private final static String BATTLESTAR_WELCOME = "So say we all.";
 	private final static String PREDATOR_WELCOME = "If it bleeds, we can kill it.";
-	private final static String FEWGOODMEN_WELCOME = "You want me on that wall. You NEED me on that wall";
-	private final static String GOODFATHER_WELCOME = "Leave the gun. Take the cannoli.";
+	private final static String FEWGOODMEN_WELCOME = "You want me on that wall. You NEED me on that wall.";
+	private final static String GODFATHER_WELCOME = "Leave the gun. Take the cannoli.";
 	private final static String HUNTREDOCTOBER_WELCOME = "Re-verify our range to target... one ping only. ";
 	private final static String HEAT_WELCOME = "Clean up, go home.";
 	private final static String DUNE_WELCOME = "And how can this be? For he IS the Kwisatz Haderach!";
@@ -57,10 +58,15 @@ public class HelloController {
 	private final static String PRESTIGE_WELCOME = "You always were the better magician, we both know that. "
 			+ "But whatever your secret was, you will have to agree, mine is better......";
 	private final static String THETOWN_WELCOME = "So in the future if you guys need to try to be slick, be slicker than a six year old.";
-												 		
+	private final static String LOTR_WELCOME = "My PRECIOUS!! AHHHH!!!!!";											
+	private final static String MD_WELCOME = "NO WIRE HANGERS, EVER!";
+	private final static String MTP_WELCOME = "I had no idea you could milk a cat.";
+	private final static String CASINO_WELCOME = "There's three ways to do things, the right way, the wrong way and the way that I do it.";
+	private final static String AM_WELCOME = "It's so damn hot.  Milk was a bad choice.";
 	String[] welcomeMessages = { ORACLE_WELCOME, JAWS_WELCOME, ANCHORMAN_WELCOME, BATTLESTAR_WELCOME, PREDATOR_WELCOME,
-			FEWGOODMEN_WELCOME, GOODFATHER_WELCOME, HUNTREDOCTOBER_WELCOME, HEAT_WELCOME, DUNE_WELCOME,
-			USUAL_SUSPECTS_WELCOME, PASSENGER57_WELCOME, DEVILWEARSPRADA_WELCOME, FUNNYFARM_WELCOME, PRESTIGE_WELCOME, THETOWN_WELCOME };
+			FEWGOODMEN_WELCOME, GODFATHER_WELCOME, HUNTREDOCTOBER_WELCOME, HEAT_WELCOME, DUNE_WELCOME,
+			USUAL_SUSPECTS_WELCOME, PASSENGER57_WELCOME, DEVILWEARSPRADA_WELCOME, FUNNYFARM_WELCOME, PRESTIGE_WELCOME, THETOWN_WELCOME, 
+			LOTR_WELCOME, MD_WELCOME, MTP_WELCOME, CASINO_WELCOME, AM_WELCOME };
 
 	/**
 	 * Provide a movie quote hello
