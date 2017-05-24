@@ -18,7 +18,8 @@ node {
       ${mvn}/bin/mvn clean package -U -Dmaven.repo.local=${root}
       cp target/dg-pzsvc-hello-java-1.0.0.jar ${root}/dg-pzsvc-hello-java.jar
     """
-    mavenPush()
+    // Removing mavenpush until we know where we are archiving to.
+    //mavenPush()
   }
 
   stage('CI Deploy') {
