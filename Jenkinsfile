@@ -26,7 +26,9 @@ node {
     sh """
       cp target/dg-pzsvc-hello-java-1.0.0.jar ${root}/dg-pzsvc-hello-java.jar
     """
-    cfPush()
+    cfPush { 
+    	ldapCredentialID=pcf_user 
+    }
     zap {
       threadfixId = THREADFIX_ID
     }
