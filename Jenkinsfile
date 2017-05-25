@@ -27,15 +27,11 @@ node {
       cp target/dg-pzsvc-hello-java-1.0.0.jar ${root}/dg-pzsvc-hello-java.jar
     """
     cfPush()
-    // Remove zap for time being
-    //zap {
-    //  threadfixId = THREADFIX_ID
-    //}
     cfBgDeploy()
   }
 
   stage('Integration Testing') {
-    postman()
+    //postman()
   }
 
   stage('Reset') {
@@ -46,14 +42,8 @@ node {
   }
 
   stage('Staging Deploy') {
-    cfPush {
-      cfDomain  = 'TBD'
-      cfSpace   = 'stage'
-    }
-    cfBgDeploy {
-      cfDomain  = 'TBD'
-      cfSpace   = 'stage'
-    }
+    cfPush()
+    cfBgDeploy()
   }
 
   stage('Cleanup') {
