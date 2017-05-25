@@ -23,7 +23,7 @@ node {
   }
   stage('Staging Deploy') {
     cfPush()
-    cfBgDeploy()
+    //cfBgDeploy()
   }
 
   stage('Cleanup') {
