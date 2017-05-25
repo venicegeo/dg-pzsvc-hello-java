@@ -27,9 +27,10 @@ node {
       cp target/dg-pzsvc-hello-java-1.0.0.jar ${root}/dg-pzsvc-hello-java.jar
     """
     cfPush()
-    zap {
-      threadfixId = THREADFIX_ID
-    }
+    // Remove zap for time being
+    //zap {
+    //  threadfixId = THREADFIX_ID
+    //}
     cfBgDeploy()
   }
 
