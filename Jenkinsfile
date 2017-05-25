@@ -21,26 +21,6 @@ node {
     // Removing mavenpush until we know where we are archiving to.
     //mavenPush()
   }
-
-  stage('CI Deploy') {
-    sh """
-      cp target/dg-pzsvc-hello-java-1.0.0.jar ${root}/dg-pzsvc-hello-java.jar
-    """
-    cfPush()
-    cfBgDeploy()
-  }
-
-  stage('Integration Testing') {
-    //postman()
-  }
-
-  stage('Reset') {
-    git([
-      url: env.GIT_URL ? env.GIT_URL : 'https://github.com/venicegeo/dg-pzsvc-hello-java',
-      branch: "master"
-    ])
-  }
-
   stage('Staging Deploy') {
     cfPush()
     cfBgDeploy()
